@@ -241,7 +241,7 @@ export default function Home() {
           </div>
           <div className="flex px-2 m-2 justify-center">
             <button
-              className="rounded-xl text-gray-400 bg-gray-800 hover:bg-gray-600 px-1 py-2 outline-none focus:outline-none"
+              className="rounded-xl text-gray-400 bg-gray-700 hover:bg-gray-800 px-1 py-2 outline-none focus:outline-none shadow-lg"
               onClick={!address ? connect : undefined}
             >
               {address ? addShortenedString : 'Connect'}
@@ -275,12 +275,12 @@ export default function Home() {
       </div>
 
       <div className="flex justify-center h-full pt-10">
-        <div className="bg-white h-2/5 sm:max-w-lg sm:w-full flex flex-col flex-shrink rounded-2xl border border-gray-300">
+        <div className="bg-white h-2/5 sm:max-w-lg sm:w-full flex flex-col flex-shrink rounded-2xl border-2 border-gray-300">
           <div className="flex flex-row justify-between p-7">
             <div className="flex flex-col mx-2 w-1/2">
               <div className="flex flex-row justify-start">Source chain:</div>
               <div
-                className="flex justify-center my-2 p-1.5 rounded-lg border hover:bg-gray-100 text-gray-600 border-gray-300 cursor-pointer"
+                className="flex justify-center my-2 p-1.5 rounded-lg border bg-gray-100 shadow-lg hover:bg-gray-200 text-gray-600 border-gray-400 cursor-pointer"
                 onClick={() => {
                   setModal(!modal)
                   setIsSourceModal(true)
@@ -298,7 +298,7 @@ export default function Home() {
             <div className="flex flex-col mx-2 w-1/2">
               <div className="flex flex-row justify-start">Destination chain:</div>
               <div
-                className="flex justify-center my-2 p-1.5 hover:bg-gray-100 rounded-lg border text-gray-600 border-gray-300 cursor-pointer"
+                className="flex justify-center my-2 p-1.5 hover:bg-gray-200 bg-gray-100 shadow-lg rounded-lg border text-gray-600 border-gray-400 cursor-pointer"
                 onClick={() => {
                   setModal(!modal)
                   setIsSourceModal(false)
@@ -317,7 +317,7 @@ export default function Home() {
             <div className="flex">Amount:</div>
             <div className="flex w-full justify-end">
               <input
-                className="border border-gray-300 rounded-lg p-1.5 text-right"
+                className="border border-gray-300 rounded-lg p-1.5 text-right focus:outline-1 focus:outline-purple-500"
                 placeholder="0.00"
                 pattern="[0-9]*"
                 onKeyPress={(event) => {
@@ -333,7 +333,7 @@ export default function Home() {
           </div>
 
           <div className="flex justify-center">
-            <button className="p-2 mt-4 bg-purple-200 rounded-lg" onClick={bridge}>
+            <button className="p-2 mt-4 border-2 shadow-lg border-purple-500 bg-purple-200 hover:bg-purple-300 rounded-lg" onClick={bridge}>
               Bridge
             </button>
           </div>
