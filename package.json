@@ -1,24 +1,11 @@
 {
-  "name": "wormhole-sdk",
   "version": "1.0.0",
-  "description": "Frontend SDK to @makerdao/dss-wormhole",
-  "files": [
-    "/dist"
-  ],
-  "license": "AGPL-3.0",
-  "main": "dist/index.js",
+  "description": "MakerDAO Teleport",
   "scripts": {
-    "postinstall": "eth-sdk",
-    "format": "prettier --check \"./**/*.ts\"",
-    "format:fix": "prettier --write \"./**/*.ts\"",
-    "lint": "eslint --ext .ts src test scripts",
-    "lint:fix": "yarn lint --fix",
-    "test": "mocha -r ts-node/register test/**/*.test.ts",
-    "test:fix": "yarn lint:fix && yarn format:fix && yarn test && yarn typecheck",
-    "typecheck": "tsc --noEmit",
-    "build": "rm -rf ./dist && tsc -p ./tsconfig.build.json && cp -R ./src/sdk ./dist/sdk",
-    "demo:arbitrum": "yarn ts-node ./scripts/demo.arbitrum.ts | grep -v \"Duplicate definition of File\"",
-    "demo:optimism": "yarn ts-node ./scripts/demo.optimism.ts | grep -v \"Duplicate definition of File\""
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "types": "dist/index.d.ts",
   "dependencies": {
